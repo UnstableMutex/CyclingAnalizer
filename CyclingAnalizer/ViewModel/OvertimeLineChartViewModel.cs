@@ -14,11 +14,25 @@ namespace CyclingAnalizer.ViewModel
         public OvertimeLineChartViewModel(IEnumerable<IDateData> data)
         {
             _data = data;
+
+        }
+        Dictionary<DateTime,int> ToDic()
+        {
+
+            var g = _data.GroupBy(x => x.Date).OrderBy(x=>x.Key);
+            Dictionary<DateTime, int> dic = new Dictionary<DateTime, int>();
+            foreach (var item in g)
+            {
+                dic.Add(item.Key, (int)item.Average(x => x.Num));
+
+            }
+            return dic;
+           
         }
 
         public Dictionary<DateTime,int> Data
         {
-            get { return _data.ToDictionary(x=>x.Date,x=>x.Num); }
+            get { return ToDic(); }
         }
     }
 }
