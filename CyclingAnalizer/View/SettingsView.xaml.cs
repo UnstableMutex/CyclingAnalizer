@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.DataVisualization.Charting;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -17,15 +16,13 @@ using System.Windows.Shapes;
 namespace CyclingAnalizer.View
 {
     /// <summary>
-    /// Логика взаимодействия для OvertimeLineChartView.xaml
+    /// Логика взаимодействия для SettingsView.xaml
     /// </summary>
-    public partial class OvertimeLineChartView : UserControl
+    public partial class SettingsView : UserControl
     {
-        public OvertimeLineChartView()
+        public SettingsView()
         {
             InitializeComponent();
-            //Addsample();
         }
-
     }
 }

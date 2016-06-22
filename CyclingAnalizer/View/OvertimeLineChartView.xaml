@@ -8,8 +8,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <chartingToolkit:Chart Name="ch">
-          
+        <chartingToolkit:Chart>
+          <chartingToolkit:Chart.Series>
+              <chartingToolkit:LineSeries Title="Cadence" IndependentValueBinding="{Binding Key}" DependentValueBinding="{Binding Value}" ItemsSource="{Binding Data}">
+                
+              </chartingToolkit:LineSeries>
+          </chartingToolkit:Chart.Series>
         </chartingToolkit:Chart>
     </Grid>
 </UserControl>
